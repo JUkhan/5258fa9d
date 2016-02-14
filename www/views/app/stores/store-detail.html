@@ -1,0 +1,20 @@
+<ion-view view-title="Offers">
+  <ion-content class="padding"> 
+      <div class="text-center">
+          <img ng-src="{{store.logo}}"></img>
+      </div>        
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+        </ion-refresher>       
+        <div class="button-bar">
+            <a class="button" ng-click="clicked('offers')" ng-class="{'button-positive': category === 'offers'}">Offers</a>
+            <a class="button" ng-click="clicked('products')" ng-class="{'button-positive': category === 'products'}">Products</a>           
+        </div>
+       
+        <div class="list">
+            <div class="item" ng-repeat="offer in offers">
+                {{offer.description}}
+            </div>
+        </div>
+     
+  </ion-content>
+</ion-view>     

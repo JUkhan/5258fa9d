@@ -1,0 +1,22 @@
+ <ion-view title="Offer Detail">
+    <ion-content has-header="true" padding="true">
+        <div class="list card">
+          <div class="item item-image">
+            <img ng-src="http://lorempixel.com/300/200/nature?v={{offer.image}}">
+          </div>
+          <div class="item item-body">
+            <div ng-bind="offer.description"></div>
+            <div> 
+                <span ng-bind="offer.price"></span> 
+                <span ng-bind="offer.offerPrice"></span>
+            </div>
+            <div>
+                <spam>From</spam>
+                <b ng-bind="offer.name"></b>
+                <spa ng-bind="offer.expireTime"></spa>
+            </div>
+          </div>
+        </div>
+        <button class="button button-positive button-block">Get Offer</button>
+    </ion-content>
+</ion-view>

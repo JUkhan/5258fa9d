@@ -1,0 +1,14 @@
+{
+  "name": "Offers",
+  "app_id": "5258fa9d",
+  "gulpStartupTasks": [
+    "sass",
+    "templatecache",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ],
+  "documentRoot": "www"
+}

@@ -1,0 +1,31 @@
+<ion-view title="Home">
+    <search-bar ng-model="search"></search-bar>
+  <ion-content class="has-header padding"> 
+        <!-- Refresh to get the new offer -->
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh()">
+        </ion-refresher>       
+        <div class="button-bar">
+            <a class="button" ng-click="clicked('latest')" ng-class="{'button-positive': offerCategory === 'latest'}">Latest Offers</a>
+            <a class="button" ng-click="clicked('best')" ng-class="{'button-positive': offerCategory === 'best'}">Best Offers</a>           
+        </div>
+       
+        <div class="list card" ng-click="gotoOfferDetil(offer.id)" ng-repeat="offer in offers">
+          <div class="item item-image">
+            <img ng-src="http://lorempixel.com/300/200/nature?v={{offer.image}}">
+          </div>
+          <div class="item item-body">
+            <div ng-bind="offer.description"></div>
+            <div> 
+                <span ng-bind="offer.price"></span> 
+                <span ng-bind="offer.offerPrice"></span>
+            </div>
+            <div>
+                <spam>From</spam>
+                <b ng-bind="offer.name"></b>
+                <spa ng-bind="offer.expireTime"></spa>
+            </div>
+          </div>
+        </div>
+     
+  </ion-content>
+</ion-view>     
