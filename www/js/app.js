@@ -175,6 +175,22 @@ angular.module('your_app_name', [
         controller: 'AppCtrl'
       }
     }
+  })
+  
+  .state('contactus',{
+   url:'/contactus',
+   templateUrl: "views/app/contactus/contactus.html",
+   controller: 'AppCtrl'  
+  })
+  .state('help',{
+   url:'/help',
+   templateUrl: "views/app/help/help.html",
+   controller: 'AppCtrl'  
+  })
+  .state('settings',{
+   url:'/settings',
+   templateUrl: "views/app/settings/settings.html",
+   controller: 'AppCtrl'  
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/home');
